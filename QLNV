@@ -31,6 +31,7 @@ void LinkedList::NhanVien::in() {
     cout << "Ngay sinh :" << ngaysinh << endl;
     cout << "Luong Co ban  :" <<luongCoBan << endl;
     cout << "Phu cap :"<<  phucap << endl; 
+    cout << "Tong Luong  :" <<luongThucLinh << endl;
     cout << "------------------------------------------\n";
 }
 void LinkedList::NhanVien::nhap() {
