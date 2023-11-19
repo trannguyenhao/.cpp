@@ -134,14 +134,16 @@ void LinkedList::timNhanVien() {
 void LinkedList::sapXep() {
     NhanVien* current = head;
     NhanVien* nextNhanVien;
-    string temp;
     while (current != NULL) {
         nextNhanVien = current->next;
         while (nextNhanVien != NULL) {
             if (current->mNV.compare(nextNhanVien->mNV) > 0) {
-                temp = current->mNV;
-                current->mNV = nextNhanVien->mNV;
-                nextNhanVien->mNV = temp;
+                swap(current->mNV, nextNhanVien->mNV);
+                swap(current->ten, nextNhanVien->ten);
+                swap(current->ngaysinh, nextNhanVien->ngaysinh);
+                swap(current->luongCoBan, nextNhanVien->luongCoBan);
+                swap(current->phucap, nextNhanVien->phucap);
+                swap(current->luongThucLinh, nextNhanVien->luongThucLinh);
             }
             nextNhanVien = nextNhanVien->next;
         }
